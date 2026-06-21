@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta Especial</title>
+
+<style>
+    body{
+        margin:0;
+        width:100vw;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-family:Arial, sans-serif;
+        background:#f5f5f5;
+        overflow:hidden;
+    }
+
+    .caixa{
+        text-align:center;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 0 15px rgba(0,0,0,0.2);
+        position:absolute;
+    }
+
+    button{
+        padding:10px 20px;
+        margin:10px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    .sim{
+        background:#28a745;
+        color:white;
+    }
+
+    .nao{
+        background:#dc3545;
+        color:white;
+    }
+</style>
+</head>
+<body>
+
+<div class="caixa" id="caixa">
+    <h2>Você quer passar o seu número do WhatsApp?</h2>
+
+    <button class="sim" onclick="abrirWhats()">Sim</button>
+
+    <button class="nao" onclick="moverCaixa()">Não</button>
+</div>
+
+<script>
+function abrirWhats(){
+    window.location.href =
+    "https://wa.me/5551989642059";
+}
+
+function moverCaixa(){
+    const caixa = document.getElementById("caixa");
+
+    const larguraMax = window.innerWidth - caixa.offsetWidth;
+    const alturaMax = window.innerHeight - caixa.offsetHeight;
+
+    const x = Math.random() * larguraMax;
+    const y = Math.random() * alturaMax;
+
+    caixa.style.left = x + "px";
+    caixa.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
