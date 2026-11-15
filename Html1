@@ -1,81 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pergunta Especial</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jaquealten_tattoo · Tatuagens autorais</title>
+<meta name="description" content="Portfólio de tatuagens autorais de jaquealten_tattoo: fine line, blackwork, pontilhismo e flash minimalista. Peça seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#0c0b0a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jaquealten_tattoo · Tatuagens autorais">
+<meta property="og:description" content="Fine line, blackwork, pontilhismo e flash minimalista. Veja o portfólio e peça seu orçamento pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b0a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23d8c6a0'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=' js';</script>
 <style>
-    body{
-        margin:0;
-        width:100vw;
-        height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        font-family:Arial, sans-serif;
-        background:#f5f5f5;
-        overflow:hidden;
-    }
-
-    .caixa{
-        text-align:center;
-        background:white;
-        padding:30px;
-        border-radius:15px;
-        box-shadow:0 0 15px rgba(0,0,0,0.2);
-        position:absolute;
-    }
-
-    button{
-        padding:10px 20px;
-        margin:10px;
-        border:none;
-        border-radius:8px;
-        cursor:pointer;
-        font-size:16px;
-    }
-
-    .sim{
-        background:#28a745;
-        color:white;
-    }
-
-    .nao{
-        background:#dc3545;
-        color:white;
-    }
-</style>
-</head>
-<body>
-
-<div class="caixa" id="caixa">
-    <h2>Você quer passar o seu número do WhatsApp?</h2>
-
-    <button class="sim" onclick="abrirWhats()">Sim</button>
-
-    <button class="nao" onclick="moverCaixa()">Não</button>
-</div>
-
-<script>
-function abrirWhats(){
-    window.location.href =
-    "https://wa.me/5551989642059";
+:root{
+  --bg:#0c0b0a; --bg2:#141210; --ink:#efe8db; --muted:#a8a095; --line:rgba(239,232,219,.14);
+  --accent:#d8c6a0; --red:#a8322d;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
-function moverCaixa(){
-    const caixa = document.getElementById("caixa");
-
-    const larguraMax = window.innerWidth - caixa.offsetWidth;
-    const alturaMax = window.innerHeight - caixa.offsetHeight;
-
-    const x = Math.random() * larguraMax;
-    const y = Math.random() * alturaMax;
-
-    caixa.style.left = x + "px";
-    caixa.style.top = y + "px";
-}
-</script>
-
-</body>
-</html>
+/* Cabeçalho */
+.top{position:sticky;top:0;z-index:30;background:rgba(12,11,10,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-family:var(--serif);font-size:1.4rem;font-weight:600;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
